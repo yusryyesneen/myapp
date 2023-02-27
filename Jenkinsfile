@@ -11,8 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh('npm cache clean')
-                sh ('npm install')
-                sh ('npm run build')
+                sh('npm install')
+                sh('npm run build')
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 //withAWS(region: 'us-east-1', s3: 'newbucketweb') {
                     //sh 'aws s3 sync build/ s3://newbucketweb --delete'
-                    sh "aws s3 cp */index.html s3://newbucketweb"
+                    sh('aws s3 cp */index.html s3://newbucketweb')
                 }
             }
         }
