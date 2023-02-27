@@ -10,8 +10,9 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'npm install'
-                sh 'npm run build'
+                sh('npm cache clean')
+                sh ('npm install')
+                sh ('npm run build')
             }
         }
 
