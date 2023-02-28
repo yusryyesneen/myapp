@@ -11,8 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 //sh('npm cache clean --force')
-                //sh('npm install')
-                sh('npm install --package-lock-only')
+                sh('npm install')
+                //sh('npm install --package-lock-only')
                 sh('npm run build')
             }
         }
